@@ -1,0 +1,9 @@
+body {
+   background-color: rgb(216, 227, 240);
+}
+
+.profile {
+   display: flex;
+   justify-content: center;
+   padding: 30px 0;
+}
