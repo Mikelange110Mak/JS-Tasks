@@ -1106,3 +1106,60 @@ function rowSumOddNumbers(n) {
 rowSumOddNumbers(5)
 */
 
+/*
+function pigIt(str) {
+   str = str.split(' ')
+
+
+   for (let i = 0; i < str.length; i++) {
+      let a = str[i].length
+
+      if (/^[a-zA-Z0-9]+$/.test(str[i])) {
+         str[i] = str[i].split(' ')
+         str[i] += str[i]
+         str[i] = str[i].slice(1, a + 1)
+         str[i] = str[i] + 'ay'
+      }
+   }
+
+   console.log(str.join(' '));
+}
+pigIt('Pig latin is cool')
+*/
+
+/*
+function findNextSquare(sq) {
+   let a = 0
+
+   a = Math.pow(Math.sqrt(sq) + 1, 2);
+
+   if (!Number.isInteger(a)) {
+      console.log(-1);
+   }
+   console.log(a);
+
+}
+findNextSquare(155)
+*/
+
+/*
+function moveZeros(arr) {
+   let nulArr = []
+
+   arr.forEach(el => {
+      if (el === 0) {
+         nulArr.push(el)
+      }
+   });
+
+   arr = arr.filter(function (item) {
+      return item !== 0
+   })
+   nulArr.forEach(el => { arr.push(el) })
+
+   console.log(arr);
+}
+
+moveZeros([9, 0, 9, 1, 2, 1, 1, 3, 1, 9, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0])
+*/
+
