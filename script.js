@@ -1163,3 +1163,59 @@ function moveZeros(arr) {
 moveZeros([9, 0, 9, 1, 2, 1, 1, 3, 1, 9, 0, 0, 9, 0, 0, 0, 0, 0, 0, 0])
 */
 
+/*
+function isPangram(string) {
+   const regex = /([a-z])(?!.*\1)/g;
+   string = string.toLowerCase()
+   if (string.match(regex).length === 26) {
+      return true
+   }
+   return false
+}
+*/
+
+/*
+function openOrSenior(data) {
+   let result = []
+   data.forEach(el => {
+      if (el[0] > 54 && el[1] > 7) {
+         result.push('Senior')
+      } else {
+         result.push('Open')
+      }
+   });
+   console.log(result);
+}
+openOrSenior([[18, 20], [45, 2], [61, 12], [37, 6], [21, 21], [78, 9]])
+*/
+
+/*
+function printerError(s) {
+   s = s.split('');
+   let count = 0
+   s.forEach(el => {
+      if (el.charCodeAt() > 109) {
+         count++
+      }
+   });
+
+   console.log(`${count}/${s.length}`);
+}
+printerError("aaaxbbbbyyhwawiwjjjwwm")
+*/
+
+/*
+function narcissistic(value) {
+   let valueCount = value.toString().split('').map(el => +el);
+   const pow = valueCount.map(el => Math.pow(el, valueCount.length))
+   let sum = 0
+   pow.forEach(el => sum += el);
+   if (sum === value) {
+      console.log(true);
+   } else {
+      console.log(false);
+   }
+
+}
+narcissistic(1652)
+*/
