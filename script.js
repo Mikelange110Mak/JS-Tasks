@@ -1219,3 +1219,24 @@ function narcissistic(value) {
 }
 narcissistic(1652)
 */
+
+/*
+var countBits = function (n) {
+   let arr = []
+   let count = 0
+   while (n >= 1) {
+      arr.push(Math.floor(n % 2))
+      n /= 2;
+   }
+   arr.forEach(el => {
+      if (el === 1) { count++ }
+   });
+   console.log(count);
+};
+countBits(10)
+*/
+
+function binary_array_to_number(arr) {
+
+}
+binary_array_to_number([1, 0, 1, 1])
