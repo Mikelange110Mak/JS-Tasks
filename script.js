@@ -1236,7 +1236,34 @@ var countBits = function (n) {
 countBits(10)
 */
 
+/*
 function binary_array_to_number(arr) {
-
+   arr = arr.join('')
+   let res = parseInt(arr, 2)
+   console.log(res);
 }
-binary_array_to_number([1, 0, 1, 1])
+binary_array_to_number([0, 0, 1, 0])
+*/
+
+function humanReadable(seconds) {
+   let h = Math.floor(seconds / 3600).toString().split('')
+   let m = Math.floor((seconds / 60) % 60).toString().split('')
+   let s = Math.floor(seconds % 60).toString().split('')
+
+
+
+   if (h.length < 2) { h.unshift('0') }
+   if (m.length < 2) { m.unshift('0') }
+   if (s.length < 2) { s.unshift('0') }
+
+   console.log(h);
+   console.log(m);
+   console.log(s);
+
+   console.log(`${h.join('')}:${m.join('')}:${s.join('')}`);
+   let arr = [...h, ...m, ...s]
+   console.log(arr);
+
+   //console.log(`${h}:${m}:${s}`);
+}
+humanReadable(359999)
