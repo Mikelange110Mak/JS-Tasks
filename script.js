@@ -1245,25 +1245,38 @@ function binary_array_to_number(arr) {
 binary_array_to_number([0, 0, 1, 0])
 */
 
+/*
 function humanReadable(seconds) {
    let h = Math.floor(seconds / 3600).toString().split('')
    let m = Math.floor((seconds / 60) % 60).toString().split('')
    let s = Math.floor(seconds % 60).toString().split('')
 
-
-
    if (h.length < 2) { h.unshift('0') }
    if (m.length < 2) { m.unshift('0') }
    if (s.length < 2) { s.unshift('0') }
 
-   console.log(h);
-   console.log(m);
-   console.log(s);
-
    console.log(`${h.join('')}:${m.join('')}:${s.join('')}`);
-   let arr = [...h, ...m, ...s]
-   console.log(arr);
-
-   //console.log(`${h}:${m}:${s}`);
+   
 }
 humanReadable(359999)
+*/
+
+/*
+function findUniq(arr) {
+   const uniqArr = arr.filter((el, i, array) => array.indexOf(el) === array.lastIndexOf(el))
+      .join()
+   console.log(Number(uniqArr));
+}
+findUniq([0.55, 0, 0, 0, 0])
+*/
+
+/*
+var number = function (busStops) {
+   const arr = busStops.reduce((acc, curr) => {
+      return acc + curr[0] - curr[1]
+   }, 0)
+   console.log(arr);
+}
+number([[10, 0], [3, 5], [5, 8]])
+*/
+
