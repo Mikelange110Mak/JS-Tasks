@@ -1280,3 +1280,12 @@ var number = function (busStops) {
 number([[10, 0], [3, 5], [5, 8]])
 */
 
+function isPrime(num) {
+   const limit = Math.sqrt(num);
+   let iter = 2
+   while (limit >= iter) {
+      if (num % iter === 0) console.log(false);;
+      iter += 1
+   }
+}
+isPrime(0)
