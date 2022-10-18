@@ -1280,6 +1280,7 @@ var number = function (busStops) {
 number([[10, 0], [3, 5], [5, 8]])
 */
 
+/*
 function isPrime(num) {
    const limit = Math.sqrt(num);
    let iter = 2
@@ -1289,3 +1290,17 @@ function isPrime(num) {
    }
 }
 isPrime(0)
+*/
+
+/*
+function duplicateEncode(word) {
+   word = word.toLowerCase().split('')
+   console.log(word);
+   word = word.map((curr, i, arr) => {
+      return arr.filter((el) => el === curr).length - 1 ? ')' : '(';
+   })
+   console.log(word);
+}
+duplicateEncode('recede')
+*/
+
