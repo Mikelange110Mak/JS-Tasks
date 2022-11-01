@@ -1341,15 +1341,10 @@ function validParentheses(parens) {
    //проверка чтобы не было count -1 (чтобы не было таких кейсов ")(" )
    for (const el of parens) {
       console.log(el);
-      if (el === '(') {
-         count++
-      } else {
-         count--
-      }
+      if (el === '(') count++
+      else count--
 
-      if (count < 0) {
-         return false
-      }
+      if (count < 0) return false
    }
 
    //ну и в конечном итоге count должен быть 0, что говорит что количество скобок одинаковое
