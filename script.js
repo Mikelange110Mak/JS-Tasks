@@ -1318,6 +1318,7 @@ function oddOrEven(array) {
 oddOrEven([0, -1, -3])
 */
 
+/*
 function simpleMultiplication(number) {
    if (number % 2 === 0) {
       return number * 8
@@ -1325,3 +1326,33 @@ function simpleMultiplication(number) {
       return number * 9
    }
 }
+*/
+
+
+function validParentheses(parens) {
+
+   let count = 0 //счетчик
+   parens = parens.split('') //из строки в массив
+
+   if (parens.length === 0) return true;  //проверка на пустоту массива
+
+
+   //проверка чтобы не было count -1 (чтобы не было таких кейсов ")(" )
+   for (let i = 0; i < parens.length; i++) {
+      if (parens[i] === '(') {
+         count++
+      } else {
+         count--
+      }
+
+      if (count < 0) {
+         return false
+      }
+   }
+
+   //ну и в конечном итоге count должен быть 0, что говорит что количество скобок одинаковое
+   if (count !== 0) return false
+   return true
+}
+
+validParentheses('')
