@@ -1329,17 +1329,19 @@ function simpleMultiplication(number) {
 */
 
 
+
 function validParentheses(parens) {
 
    let count = 0 //счетчик
+
    parens = parens.split('') //из строки в массив
 
    if (parens.length === 0) return true;  //проверка на пустоту массива
 
-
    //проверка чтобы не было count -1 (чтобы не было таких кейсов ")(" )
-   for (let i = 0; i < parens.length; i++) {
-      if (parens[i] === '(') {
+   for (const el of parens) {
+      console.log(el);
+      if (el === '(') {
          count++
       } else {
          count--
@@ -1355,4 +1357,6 @@ function validParentheses(parens) {
    return true
 }
 
-validParentheses('')
+validParentheses('((()))()))()')
+
+
