@@ -1329,7 +1329,7 @@ function simpleMultiplication(number) {
 */
 
 
-
+/*
 function validParentheses(parens) {
 
    let count = 0 //счетчик
@@ -1352,6 +1352,104 @@ function validParentheses(parens) {
    return true
 }
 
-validParentheses('((()))()))()')
+validParentheses('((()))()))()');
+*/
+
+
+/* https://www.codewars.com/kata/546f922b54af40e1e90001da
+
+function alphabetPosition(text) {
+
+   //Переменная которая убирает лишние символы:
+   const pureLet = text.replace(/[^a-z]/ig, "").toLowerCase();
+
+   //Массив куда будет пушиться результат:
+   let arr = []
+
+   //Счетчик для цикла и в качестве поиска по индексу:
+   let count = 0;
+
+   //Пока счетчик меньше длины строки:
+   while (count < pureLet.length) {
+      //В массив будет пушиться юникод буквы с индексом счетчика (по порядку) - 96 (у буквы 'А' юникод 97)
+      arr.push(pureLet.charCodeAt(count) - 96)
+      //Счетчик увеличивается
+      count++
+   }
+
+   console.log(arr.join(' '));
+
+}
+alphabetPosition("a00j8as-")
+*/
+
+
+/*
+https://www.codewars.com/kata/556deca17c58da83c00002db
+function tribonacci(signature, n) {
+
+   let arr = signature
+
+
+   //дурацкие условия задачи:
+   switch (n) {
+      case (0): return [];
+      case (1): return [signature[0]];
+      case (2): return [signature[0], signature[1]];
+      case (3): return [signature[0], signature[1], signature[2]];
+   }
+
+
+
+   //я не могу напрямую использовать индекс элемента в цикле for of, поэтому подсмотрел такое ухищрение:
+   for (let [i, v] of arr.entries()) {
+      if (arr.length >= n) break
+
+      let a = v + arr[i + 1] + arr[i + 2]
+
+      arr.push(a)
+   }
+
+   console.log(arr);
+}
+tribonacci([1, 1, 1], 3)
+*/
+
+
+/*
+//https://www.codewars.com/kata/5552101f47fc5178b1000050
+function digPow(n, p) {
+
+   //число в массив чисел
+   const arr = n.toString(10).split('').map(e => parseInt(e, 10))
+
+   //массив куда буду помещать результат
+   let res = []
+
+   //счетчик
+   let count = 0;
+
+   for (let num of arr) {
+      //возведение в степень
+      let a = Math.pow(num, p + count)
+
+      count++
+
+      //пуш в массив результата
+      res.push(a)
+   }
+
+   //подсчитать сумму чисел результата
+   const result = res.reduce((acc, curr) => {
+      return acc + curr
+   }, 0)
+
+   //вернуть ее поделенную на аргумент n 
+   if (!Number.isInteger(result / n)) console.log(-1);
+   else console.log(result / n);
+
+}
+digPow(46288, 3)
+*/
 
 
