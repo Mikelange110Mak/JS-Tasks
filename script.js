@@ -1453,3 +1453,41 @@ digPow(46288, 3)
 */
 
 
+
+
+/*https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
+
+function solution(str) {
+   //строка в массив
+   const arr = str.split('')
+   //массив для результата
+   let res = []
+   //мои любимые счетчики
+   let count = 0
+   //переменная длины массива
+   const length = arr.length
+
+   //перебор массива по индексам элементов
+   for (let [i] of arr.entries()) {
+      //переменная пары букв
+      let subStr = `${arr[i + count]}${arr[i + count + 1]}`
+      //пуш в результирующий массив
+      res.push(subStr)
+      //счетчик ++
+      count++
+   }
+
+   //если длина строки четная, то возвращаю результат, обрезая говно которое остается
+   if (length % 2 === 0) console.log(res.slice(0, length / 2));
+   else {
+      //если нечетная, то алгоритм такой:
+      let c = res.slice(0, length / 2 + 1)
+      c[c.length - 1] = c[c.length - 1].replace(/undefined/g, "_")
+      console.log(c);
+   }
+
+}
+solution("abcdefghih")
+
+*/
+
