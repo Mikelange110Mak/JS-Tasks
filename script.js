@@ -1421,7 +1421,7 @@ tribonacci([1, 1, 1], 3)
 function digPow(n, p) {
 
    //число в массив чисел
-   const arr = n.toString(10).split('').map(e => parseInt(e, 10))
+   const arr = Array.from(String(n), Number);
 
    //массив куда буду помещать результат
    let res = []
@@ -1455,7 +1455,8 @@ digPow(46288, 3)
 
 
 
-/*https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
+/*
+//https://www.codewars.com/kata/515de9ae9dcfc28eb6000001
 
 function solution(str) {
    //строка в массив
@@ -1490,4 +1491,74 @@ function solution(str) {
 solution("abcdefghih")
 
 */
+
+
+/*
+https://www.codewars.com/kata/550498447451fbbd7600041c
+
+function comp(array1, array2) {
+
+   //условия задачи:
+   if (array1 === null || array2 === null) console.log(false);
+   if (array1.length === 0 || array2.length === 0) console.log(true);
+
+   //Массив для сравнения:
+   let res = []
+
+   //Проверка, все ли элементы 2 массива, являются квадратным корнем элементов первого массива:
+   for (let value of array2) {
+      if (!array1.includes(Math.sqrt(value))) console.log(false);
+      else {
+         //если да, то элементы пушатся в результирующий массив, для последующего сравнения (чтобы не проверялись одни и те же элементы массива, и не выводить true):
+         res.push(Math.sqrt(value))
+      }
+   }
+
+   //сортировка для того чтобы легче сравнить
+   res.sort((a, b) => a - b)
+   array1.sort((a, b) => a - b)
+
+   //сравнение элементов
+   for (let i = 0; i < array1.length; i++) {
+      if (res[i] !== array1[i]) console.log(false);
+   }
+
+   return true
+}
+comp([121, 144, 19, 161, 19, 144, 19, 11], [121, 14641, 20736, 361, 25921, 361, 20736, 361]);
+*/
+
+
+/*
+//https://www.codewars.com/kata/5839edaa6754d6fec10000a2
+
+function findMissingLetter(array) {
+   let arr = array;
+   //Массив куда последним элементом упадет нужная кодировка
+   let res = []
+
+   //Перебор массива букв на кодировки
+   for (let value of arr) {
+      let count = value.charCodeAt()
+      res.push(count)
+   }
+
+   //Имея массив с кодировками символов, нехитрое дело вычислить какой нехватает
+   for (let [i, v] of res.entries()) {
+      if (v + 1 !== res[i + 1]) {
+         res.push(v + 1)
+         //Как пойман нужный элемент, останавливаю цикл, чтобы последний элемент тоже не запушился
+         break
+      }
+   }
+
+   let result = res[res.length - 1]
+
+   //Это перекодировка в букву:
+   let uint8Array = new Uint8Array([result]);
+   console.log(new TextDecoder().decode(uint8Array));
+}
+findMissingLetter(['O', 'Q', 'R', 'S'])
+*/
+
 
