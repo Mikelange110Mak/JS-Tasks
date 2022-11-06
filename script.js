@@ -1562,3 +1562,13 @@ findMissingLetter(['O', 'Q', 'R', 'S'])
 */
 
 
+/*
+//https://www.codewars.com/kata/5259b20d6021e9e14c0010d4
+function reverseWords(str) {
+   let arr = [...str].reverse().join('').split(' ').reverse().join(' ')
+   console.log(arr);
+}
+reverseWords("This is an example!")
+*/
+
+
