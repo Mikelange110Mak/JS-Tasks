@@ -1572,3 +1572,22 @@ reverseWords("This is an example!")
 */
 
 
+/*
+//https://www.codewars.com/kata/576757b1df89ecf5bd00073b
+function towerBuilder(nFloors) {
+
+   //результирующий массив
+   const res = [];
+
+   for (let i = 0; i < nFloors; i++) {
+      //в массив будет пушиться пробел, который повторится в начале и в конце по формуле (кол-во этажей-итерация - 1)
+      res.push(" ".repeat(nFloors - i - 1)
+         //и будет прибавляться звездочка на каждой итерации по формуле (итерация*2-1)
+         + "*".repeat((i * 2) + 1)
+         + " ".repeat(nFloors - i - 1))
+   }
+
+   console.log(res);
+}
+towerBuilder(6)
+*/
